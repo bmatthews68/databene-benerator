@@ -16,7 +16,7 @@
 -->
 <project name="${project.name}">
 	<bannerLeft>
-		<name>In-Memory Database Maven Plugin</name>  
+		<name>Databene Benerator Domain for Ireland</name>  
 		<href>http://databene-benerator-ie.btmatthews.com</href>  
 	</bannerLeft>  
 	<publishDate format="dd MMM yyyy" position="left" />  

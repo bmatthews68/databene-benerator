@@ -33,47 +33,46 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Unit/integration test of the PPSN generator {@link PPSNGenerator} and
- * validator {@link PPSNValidator}.
+ * Unit/integration test of the PPSN generator {@link PPSNGenerator} and validator {@link PPSNValidator}.
  * 
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @version $Revision$
  */
 public class TestPPSN {
 
-	/**
-	 * The PPSN generator that will be used for the tests.
-	 */
-	private Generator<String> generator;
+    /**
+     * The PPSN generator that will be used for the tests.
+     */
+    private Generator<String> generator;
 
-	/**
-	 * The PPSN validator that will be used for the tests.
-	 */
-	private Validator<String> validator;
+    /**
+     * The PPSN validator that will be used for the tests.
+     */
+    private Validator<String> validator;
 
-	/**
-	 * The default constructor.
-	 */
-	public TestPPSN() {
-	}
+    /**
+     * The default constructor.
+     */
+    public TestPPSN() {
+    }
 
-	/**
-	 * Create the a PPSN generator and validator as test fixtures.
-	 */
-	@Before
-	public void setUp() {
-		this.generator = new PPSNGenerator();
-		this.validator = new PPSNValidator();
-	}
+    /**
+     * Create the a PPSN generator and validator as test fixtures.
+     */
+    @Before
+    public void setUp() {
+        this.generator = new PPSNGenerator();
+        this.validator = new PPSNValidator();
+    }
 
-	/**
-	 * Test that the generator generates 1000 valid PPSNs.
-	 */
-	@Test
-	public void testGenerator() {
-		for (int i = 0; i < 1000; ++i) {
-			final String ppsn = this.generator.generate();
-			Assert.assertTrue(this.validator.valid(ppsn));
-		}
-	}
+    /**
+     * Test that the generator generates 1000 valid PPSNs within 100ms.
+     */
+    @Test(timeout = 100)
+    public void testGenerator() {
+        for (int i = 0; i < 1000; ++i) {
+            final String ppsn = this.generator.generate();
+            Assert.assertTrue(this.validator.valid(ppsn));
+        }
+    }
 }

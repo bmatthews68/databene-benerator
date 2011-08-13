@@ -98,12 +98,19 @@ public class TestPPSNValidator {
 	@Test
 	public void testInvalidDigits() {
 		Assert.assertFalse(this.validator.valid("Z333346H"));
+        Assert.assertFalse(this.validator.valid("Z333346HW"));
 		Assert.assertFalse(this.validator.valid("7Z33346H"));
+        Assert.assertFalse(this.validator.valid("7Z33346HW"));
 		Assert.assertFalse(this.validator.valid("73Z3346H"));
+        Assert.assertFalse(this.validator.valid("73Z3346HW"));
 		Assert.assertFalse(this.validator.valid("733Z346H"));
-		Assert.assertFalse(this.validator.valid("7333Z46H"));
+        Assert.assertFalse(this.validator.valid("733Z346HW"));
+        Assert.assertFalse(this.validator.valid("7333Z46H"));
+		Assert.assertFalse(this.validator.valid("7333Z46HW"));
 		Assert.assertFalse(this.validator.valid("73333Z6H"));
+        Assert.assertFalse(this.validator.valid("73333Z6HW"));
 		Assert.assertFalse(this.validator.valid("733334ZH"));
+        Assert.assertFalse(this.validator.valid("733334ZHW"));
 	}
 
 	/**
