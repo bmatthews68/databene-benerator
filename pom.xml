@@ -5,9 +5,10 @@
 		http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.btmatthews.databene</groupId>
-	<artifactId>databene-benerator-ie</artifactId>
+	<artifactId>databene-benerator</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>Benerator Domain for Ireland</name>
+	<packaging>pom</packaging>
+	<name>Benerator Domains</name>
 	<inceptionYear>2011</inceptionYear>
 	<licenses>
 		<license>
@@ -24,6 +25,23 @@
 			<url>http://btmatthews.me</url>
 		</developer>
 	</developers>
+	<properties>
+		<benerator.version>0.6.5</benerator.version>
+	</properties>
+	<modules>
+		<module>databene-benerator-ie</module>
+		<module>databene-benerator-driver</module>
+		<module>databene-benerator-vehicle</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.databene</groupId>
+				<artifactId>databene-benerator</artifactId>
+				<version>${benerator.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<build>
 		<extensions>
 			<extension>
@@ -113,7 +131,7 @@
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<configLocation>checkstyle.xml</configLocation>
+					<configLocation>../checkstyle.xml</configLocation>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -151,31 +169,24 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<dependencies>
-		<dependency>
-			<groupId>org.databene</groupId>
-			<artifactId>databene-benerator</artifactId>
-			<version>0.6.5</version>
-		</dependency>
-	</dependencies>
 	<scm>
-		<connection>scm:git:git@github.com:bmatthews68/databene-benerator-ie.git</connection>
-		<url>scm:git:git@github.com:bmatthews68/databene-benerator-ie.git</url>
-		<developerConnection>scm:git:git@github.com:bmatthews68/databene-benerator-ie.git</developerConnection>
+		<connection>scm:git:git@github.com:bmatthews68/databene-benerator.git</connection>
+		<url>scm:git:git@github.com:bmatthews68/databene-benerator.git</url>
+		<developerConnection>scm:git:git@github.com:bmatthews68/databene-benerator.git</developerConnection>
 	</scm>
-	<url>https://github.com/bmatthews68/databene-benerator-ie</url>
+	<url>https://github.com/bmatthews68/databene-benerator</url>
 	<organization>
 		<name>Brian Matthews</name>
 		<url>http://btmatthews.com</url>
 	</organization>
 	<issueManagement>
-		<url>https://github.com/bmatthews68/databene-benerator-ie/issues</url>
+		<url>https://github.com/bmatthews68/databene-benerator/issues</url>
 		<system>GitHub</system>
 	</issueManagement>
 	<distributionManagement>
 		<site>
-			<id>databene-benerator-ie.btmatthews.com</id>
-			<url>gitsite:git@github.com/bmatthews68/databene-benerator-ie.git</url>
+			<id>databene-benerator.btmatthews.com</id>
+			<url>gitsite:git@github.com/bmatthews68/databene-benerator.git</url>
 		</site>
 		<repository>
 			<id>releases.btmatthews.com</id>
