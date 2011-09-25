@@ -33,7 +33,7 @@ import org.databene.benerator.util.ThreadSafeGenerator;
  * Generate valid Personal Public Service Numbers (PPSNs).
  * 
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
- * @version $Revision$
+ * @since 1.0.0
  */
 public final class PPSNGenerator extends ThreadSafeGenerator<String> {
 

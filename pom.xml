@@ -170,8 +170,8 @@
 		</plugins>
 	</reporting>
 	<scm>
+		<url>https://github.com/bmatthews68/databene-benerator</url>
 		<connection>scm:git:git@github.com:bmatthews68/databene-benerator.git</connection>
-		<url>scm:git:git@github.com:bmatthews68/databene-benerator.git</url>
 		<developerConnection>scm:git:git@github.com:bmatthews68/databene-benerator.git</developerConnection>
 	</scm>
 	<url>https://github.com/bmatthews68/databene-benerator</url>

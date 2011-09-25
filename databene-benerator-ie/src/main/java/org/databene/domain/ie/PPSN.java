@@ -36,6 +36,13 @@ import javax.validation.Constraint;
 
 import org.databene.benerator.primitive.UnluckyNumberValidator;
 
+/**
+ * This annotation is a marker to indicate that a field contains a Personal
+ * Public Service Number (PPSN).
+ * 
+ * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
+ * @since 1.0.0
+ */
 @Documented
 @Constraint(validatedBy = UnluckyNumberValidator.class)
 @Target({ ElementType.METHOD, ElementType.FIELD, ElementType.TYPE })
