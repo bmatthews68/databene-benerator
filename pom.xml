@@ -26,7 +26,7 @@
 		</developer>
 	</developers>
 	<properties>
-		<benerator.version>0.6.5</benerator.version>
+		<benerator.version>0.7.7</benerator.version>
 	</properties>
 	<modules>
 		<module>databene-benerator-ie</module>
