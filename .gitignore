@@ -1,5 +1,7 @@
-/target
-/.settings
-/.classpath
-/.checkstyle
-/.project
+target
+.settings
+.classpath
+.checkstyle
+.project
+*.iml
+.idea
